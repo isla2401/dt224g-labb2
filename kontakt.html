@@ -66,6 +66,26 @@
         width: 100%;
         padding: 5px;
         margin: 5px 0;
+        border: 2px solid rgb(3, 45, 61); /*Mörkblå ram*/
+        border-radius: 5px; /*Rundad kant*/
+        font-family: "Noto Sans", sans-serif; /*Ändra font*/
+      }
+
+      /*Styling av "Skicka"-knappen*/
+      form button{
+        padding: 4px 8px; /**/
+        background-color: rgb(233, 242, 247); /*Ljusblå bakgrund*/
+        border: 2px solid rgb(3, 45, 61); /*Mörkblå ram*/
+        border-radius: 5px; /*Rundad kant*/
+        color: rgb(3, 45, 61); /*Mörkblå text*/
+        font-weight: bold; /*Tjock text*/
+        transition-duration: 0.2s; /*Hur lång tid förändringen av utseendet vid "hover" ska ta*/
+      }
+
+      form button:hover{/*Gör "Skicka"-knappen mörkblå med vit text när muspekaren hålls över knappen*/
+        background-color: rgb(3, 45, 61);
+        color: white;
+        cursor: pointer;
       }
     </style>
   </head>
