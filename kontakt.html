@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isacs webbplats</title>
+
+    <!--Hämta fonten Noto Sans från Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--CSS-->
+    <style>
+      body {/*Ta bort default-marginen som body har, centrera all text, byt font och bakgrundsfärg*/
+        margin: 0;
+        text-align: center;
+        font-family: "Noto Sans", sans-serif;
+        background-color: rgb(241, 245, 247);
+      }
+
+      nav {/*Bakgrundfärg, margin och padding för navigationsbaren*/
+        background-color: rgb(208, 227, 235);
+        margin: 10px 0;
+        padding: 5px 0;
+      }
+
+      /*Styling av listan i nav*/
+      nav ul {
+        list-style-type: none; /*Ta bort listpunkterna*/
+        display: flex; /*Gör listan till en flexbox. Då kan list items ligga horisontellt bredvid varandra*/
+        gap: 30px; /*Mellanrum mellan list items*/
+        justify-content: center; /*Centrera listinnehållet*/
+        padding: 0;
+      }
+
+      footer {/*Bakgrundsfärg och padding för footern*/
+        background-color: rgb(208, 227, 235);
+        padding: 20px 0 5px 0;
+      }
+
+      .logo {/*Storlek och margin för loggan*/
+        width: 300px;
+        max-width: 100%;
+        margin: 15px;
+      }
+
+      a {/*Ändra färgen på länkar*/
+        color: rgb(3, 45, 61);
+      }
+
+      a:hover {/*Ändra färgen på länken när muspekaren hålls över den*/
+        color: rgb(255, 81, 0);
+      }
+
+      form {/*Maxbredd, centrera och ordna texten till vänster i formuläret*/
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      input,textarea {/*Gör inputfälten lika breda som formuläret, lägg till padding och margin*/
+        width: 100%;
+        padding: 5px;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--Sidhuvud med navigation-->
+    <header>
+      <a href="index.html">
+        <img
+          class="logo"
+          src="images/logo.svg"
+          alt="Logotyp med texten 'Isacs Webbplats'"
+        />
+      </a>
+      <!--Navigationsmeny-->
+      <nav>
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="hobby.html">Hobby</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Huvudinnehåll-->
+    <main>
+      <h1>Kontakt</h1>
+      <p>Kontakta mig genom formuläret nedan.</p>
+      <!--Kontaktformulär-->
+      <form>
+        <label for="name">Namn:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Förnamn Efternamn"
+          required
+        />
+        <br />
+        <label for="email">E-post:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="exempel@gmail.com"
+          required
+        />
+        <br/>
+        <label for="message">Meddelande:</label>
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Skriv ditt meddelande här"
+          required
+        ></textarea>
+        <br />
+        <button type="submit">Skicka</button>
+      </form>
+      <!--Övrig kontaktinformation-->
+      <p>
+        Du kan också nå mig direkt på
+        <a href="mailto:isla2401@student.miun.se">isla2401@student.miun.se</a>.
+      </p>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <a href="kontakt.html">Kontakta mig</a>
+      <p>© 2026 Isac Larsson</p>
+    </footer>
+  </body>
+</html>

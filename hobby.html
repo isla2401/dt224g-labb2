@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isacs webbplats</title>
+
+    <!--Hämta fonten Noto Sans från Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--CSS-->
+    <style>
+      body {/*Ta bort default-marginen som body har, centrera all text, byt font och bakgrundsfärg*/
+        margin: 0;
+        text-align: center;
+        font-family: "Noto Sans", sans-serif;
+        background-color: rgb(241, 245, 247);
+      }
+
+      nav {/*Bakgrundfärg, margin och padding för navigationsbaren*/
+        background-color: rgb(208, 227, 235);
+        margin: 10px 0;
+        padding: 5px 0;
+      }
+
+      /*Styling av listan i nav*/
+      nav ul {
+        list-style-type: none; /*Ta bort listpunkterna*/
+        display: flex; /*Gör listan till en flexbox. Då kan list items ligga horisontellt bredvid varandra*/
+        gap: 30px; /*Mellanrum mellan list items*/
+        justify-content: center; /*Centrera listinnehållet*/
+        padding: 0;
+      }
+
+      footer {/*Bakgrundsfärg och padding för footern*/
+        background-color: rgb(208, 227, 235);
+        padding: 20px 0 5px 0;
+      }
+
+      article {/*Maxbredd och margin för article*/
+        max-width: 700px;
+        margin: 30px auto;
+      }
+
+      img {/*Maxhöjd och maxbredd för bilder*/
+        max-height: 320px;
+        max-width: 100%;
+      }
+
+      .logo {/*Storlek och margin för loggan*/
+        width: 300px;
+        margin: 15px;
+      }
+
+      a {/*Ändra färgen på länkar*/
+        color: rgb(3, 45, 61);
+      }
+
+      a:hover {/*Ändra färgen på länken när muspekaren hålls över den*/
+        color: rgb(255, 81, 0);
+      }
+
+      table,th,td {/*Ge tabellen och rutorna i den en ram och lägg till padding*/
+        border: 1px solid black;
+        padding: 5px;
+      }
+
+      table {/*Ge tabellen samma bredd som articlen och slå samman ramarna i tabellen*/
+        width: 100%;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--Sidhuvud med navigation-->
+    <header>
+      <a href="index.html">
+        <img
+          class="logo"
+          src="images/logo.svg"
+          alt="Logotyp med texten 'Isacs Webbplats'"
+        />
+      </a>
+      <!--Navigationsmeny-->
+      <nav>
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="hobby.html">Hobby</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Huvudinnehåll-->
+    <main>
+      <h1>Min hobby</h1>
+
+      <!--Information om bouldering-->
+      <article>
+        <h2>Bouldering</h2>
+        <p>
+          Bouldering är en typ av klättring som sker på låg höjd utan rep eller
+          sele. Vanligtvis klättrar man inte högre än ca 4-5 meter och för att
+          dämpa fallet används istället mjuka mattor. Till skillnad från
+          repklättring kräver bouldering inte lika mycket uthållighet eftersom
+          lederna är kortare. Istället ligger större fokus på teknik,
+          koordination och problemlösning.
+        </p>
+        <img
+          src="images/climbing-indoors.jpg"
+          alt="Klättrare på en inomhusvägg med färgglada grepp."
+        />
+        <p>
+          Bouldering går att utföra både inomhus, vanligen i klättergym, men
+          också utomhus där man klättrar på stenar (därav namnet bouldering).
+          Lederna man klättrar kallas för “problem”. Ett av de mest kända
+          problemen heter “Burden of Dreams” och finns strax utanför den finska
+          staden Loviisa. Burden of Dreams klättrades för första gången av Nalle
+          Hukkataival i oktober 2016 och var fram till november 2025 det
+          svåraste problemet någon klarat.
+        </p>
+        <figure>
+          <img
+            src="images/burden.webp"
+            alt="Klättrare i röd tröja på en brant överhängande klippvägg i skogen."
+          />
+          <figcaption>
+            <i>Nalle Hukkataival på Burden of Dreams</i>
+          </figcaption>
+        </figure>
+      </article>
+
+      <!--Lista över svåraste boulderproblemen-->
+      <article>
+        <h2>De svåraste boulderproblemen</h2>
+        <table>
+          <caption>
+            Lista över de fem svåraste boulderproblemen enligt
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://climbing-history.org/hardest?discipline=boulder&grade=9A"
+            >
+              climbing-history.org</a
+            >.
+          </caption>
+          <thead>
+            <tr>
+              <th>Nr</th>
+              <th>Problem</th>
+              <th>Svårighetsgrad</th>
+              <th>Först bestigen av</th>
+              <th>Antal bestigningar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Exodia</td>
+              <td>9A+</td>
+              <td>Elias Iagnemma</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Burden of Dreams</td>
+              <td>9A</td>
+              <td>Nalle Hukkataival</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Soudain Seul</td>
+              <td>9A</td>
+              <td>Simon Lorenzi</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Return of the Sleepwalker</td>
+              <td>9A</td>
+              <td>Daniel Woods</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Alphane</td>
+              <td>9A</td>
+              <td>Shawn Raboutou</td>
+              <td>7</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <a href="kontakt.html">Kontakta mig</a>
+      <p>© 2026 Isac Larsson</p>
+    </footer>
+  </body>
+</html>

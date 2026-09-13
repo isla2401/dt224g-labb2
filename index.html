@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isacs webbplats</title>
+
+    <!--Hämta fonten Noto Sans från Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--CSS-->
+     <style>
+      /*Sorry om det blev för mycket CSS för denna uppgift. Jag kan ta bort det i så fall.*/
+
+      body { /*Ta bort default-marginen som body har, centrera all text, byt font och bakgrundsfärg*/
+        margin: 0; 
+        text-align: center; 
+        font-family: "Noto Sans", sans-serif;
+        background-color: rgb(241, 245, 247);
+      }
+
+      nav { /*Bakgrundfärg, margin och padding för navigationsbaren*/
+        background-color: rgb(208, 227, 235);
+        margin: 10px 0;
+        padding: 5px 0;
+      }
+
+      /*Styling av listan i nav*/
+      nav ul { 
+        list-style-type: none; /*Ta bort listpunkterna*/
+        display: flex; /*Gör listan till en flexbox. Då kan list items ligga horisontellt bredvid varandra*/
+        gap: 30px; /*Mellanrum mellan list items*/
+        justify-content: center; /*Centrera listinnehållet*/
+        padding: 0;
+      }
+
+      footer { /*Bakgrundsfärg och padding för footern*/
+        background-color: rgb(208, 227, 235);
+        padding: 20px 0 5px 0;
+      }
+
+      article { /*Maxbredd och margin för article*/
+        max-width: 700px;
+        margin: 30px auto;
+      }
+
+      img { /*Maxhöjd och maxbredd för bilder*/
+        max-height: 320px; 
+        max-width: 100%;
+      }
+
+      .logo { /*Storlek och margin för loggan*/
+        width: 300px;
+        margin: 15px;
+      }
+
+      a { /*Ändra färgen på länkar*/
+        color: rgb(3, 45, 61);
+      }
+
+      a:hover { /*Ändra färgen på länken när muspekaren hålls över den*/
+        color: rgb(255, 81, 0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--Sidhuvud med navigation-->
+    <header>
+      <a href="index.html">
+        <img
+          class="logo"
+          src="images/logo.svg"
+          alt="Logotyp med texten 'Isacs Webbplats'"
+        />
+      </a>
+      <!--Navigationsmeny-->
+      <nav>
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="hobby.html">Hobby</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Huvudinnehåll-->
+    <main>
+      <h1>Välkommen till min webbplats!</h1>
+
+      <!--Information om Isac-->
+      <article>
+        <h2>Vem är jag?</h2>
+        <p>
+          Jag heter Isac Larsson, är 22 år och bor i Falun. På fritiden gillar
+          jag att spela datorspel (mest Overwatch, men också Minecraft och Sims
+          4 ibland). Utöver det tycker jag mycket om att klättra. Jag håller
+          mest på med det som kallas för bouldering, där man klättrar på lägre
+          höjd utan rep och sele. Läs mer om det på sidan
+          <a href="hobby.html">hobby</a>.
+        </p>
+        <p>
+          På gymnasiet gick jag teknikprogrammet med it-inriktning så jag har en
+          del erfarenhet av programmering och webbutveckling sedan tidigare. Jag
+          tycker webbutveckling är fantastiskt roligt och jag ser verkligen fram
+          emot att lära mig mer!
+        </p>
+        <img
+          src="images/me-climbing.webp"
+          alt="Isac klättrar inomhus på en färgglad klättervägg."
+        />
+        <img
+          src="images/me.webp"
+          alt="Isac i naturen iklädd en beige skjorta och brun keps"
+        />
+      </article>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <a href="kontakt.html">Kontakta mig</a>
+      <p>© 2026 Isac Larsson</p>
+    </footer>
+  </body>
+</html>
